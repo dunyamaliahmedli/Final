@@ -1,0 +1,214 @@
+﻿@model List<Team>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="home" class="birinci ">
+    <div class="container text-center p-5 text1">
+
+        <h1>Welcome To Our Studio!</h1>
+        <h1 style="font-size: 70px;">IT'S NICE TO MEET YOU</h1>
+
+        <div class="btn1 p-5">
+            <a class="btn " href="">Tell Me More</a>
+        </div>
+    </div>
+</section>
+
+
+<section id="services" class="ikinci p-5">
+    <div class="text-center p-5">
+        <h1>Services</h1>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+
+    <div class="container d-flex gap-3 text-center">
+        <div class="">
+            <i style="font-size: 55px;" class="fa-solid fa-cart-arrow-down icn1 text-center"></i>
+            <h4>E-Commerce</h4>
+            <p class="w-100">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                architecto quo
+                inventore harum ex magni, dicta impedit.
+            </p>
+
+        </div>
+        <div class="">
+
+            <i style="font-size: 55px;" class="icn1 fa-solid fa-car"></i>
+            <h4>Auto-Mobiles</h4>
+            <p class="w-100">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                architecto quo
+                inventore harum ex magni, dicta impedit.
+            </p>
+
+        </div>
+        <div class="">
+
+            <i style="font-size: 55px;" class="icn1 fa-brands fa-windows"></i>
+            <h4>Windows</h4>
+            <p class="w-100">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                architecto quo
+                inventore harum ex magni, dicta impedit.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section id="about" class="ucuncu">
+    <div class="p-5 text-center">
+        <h1>ABOUT</h1>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+
+    <div class=" d-flex abt1 p-5 container">
+        <div class="float-end">
+
+            <h6>2010-2012</h6>
+            <h6>Our Humble Beginnings</h6>
+            <p class="w-100">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius
+                sapiente, totam
+                reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore
+                laudantium consectetur!
+            </p>
+        </div>
+        <div class="text-center">
+            <img style="width: 110px; height: 110px; border-radius: 50%;" src="~/assets/img/6.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="p-5 d-flex abt1  container">
+        <div class="text-center">
+            <img style="width: 110px; height: 110px; border-radius: 50%;" src="~/assets/img/5.jpg" alt="">
+        </div>
+        <div class="float-end">
+
+            <h6>2010-2012</h6>
+            <h6>Our Humble Beginnings</h6>
+            <p class="w-100">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius
+                sapiente, totam
+                reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore
+                laudantium consectetur!
+            </p>
+        </div>
+
+    </div>
+    <div class="p-5 d-flex abt1  container">
+        <div class="float-end">
+
+            <h6>2010-2012</h6>
+            <h6>Our Humble Beginnings</h6>
+            <p class="w-100">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius
+                sapiente, totam
+                reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore
+                laudantium consectetur!
+            </p>
+        </div>
+        <div class="text-center">
+            <img style="width: 110px; height: 110px; border-radius: 50%;" src="~/assets/img/7.jpg" alt="">
+        </div>
+    </div>
+    <div class="p-5  abt1  container">
+        <div class="d-flex">
+
+            <div class="text-center">
+                <img style="width: 110px; height: 110px; border-radius: 50%;" src="~/assets/img/8.jpg" alt="">
+            </div>
+            <div class="float-end">
+
+                <h6>2010-2012</h6>
+                <h6>Our Humble Beginnings</h6>
+                <p class="w-100">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                    eius
+                    sapiente, totam
+                    reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
+                    dolore
+                    laudantium consectetur!
+                </p>
+                <div class="Work text-center">
+                    <p>
+                        BE PART <br>
+                        OF OUR <br>
+                        WORK!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section id="team" class="dorduncu">
+    <div class="text-center p-5">
+        <h1 class="royalblue">OUR TEAM</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+    <div class="d-flex gap-3" >
+    @foreach (var item in Model)
+    {
+        <div class="p-5 text-center d-flex gap-5 container justify-content-center">
+            <div>
+                <img class="img1" style="width: 280px; height: 280px; border-radius: 50%;" src="~/assets/img/@item.Image"
+                     alt="">
+                <h4>@item.FullName</h4>
+                <p>@item.JobName</p>
+
+                <i style="font-size: 25px;" class="fa-brands fa-twitter"></i>
+                <i style="font-size: 25px;" class="fa-brands fa-facebook"></i>
+                <i style="font-size: 25px;" class="fa-brands fa-linkedin"></i>
+
+            </div>
+
+        </div>
+}
+        </div>
+
+    </section>
+
+<section id="contact" class="besinci p-5">
+    <div class="text-center p-3">
+        <h1 class="royalblue">CONTACT US</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+
+    <div class="container  ">
+        <div>
+            <input class="inpt" type="text" placeholder="Your Name">
+            <input class="inpt" type="text" placeholder="Your Message">
+
+            <br>
+            <br>
+
+            <input class="inpt" type="text" placeholder="Your Email">
+            <br>
+            <br>
+
+
+            <input class="inpt" type="text" placeholder="Your Phone">
+
+
+
+
+        </div>
+        <div class="text-center p-5">
+            <a class="btn btn3" href="">Send Message</a>
+        </div>
+
+        <!-- <div>
+            <input style="width: 20%; height: 10vh;" type="text" placeholder="Your Meswsage">
+        </div> -->
+    </div>
+
+</section>
+
